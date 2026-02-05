@@ -8,9 +8,9 @@ Barre de taches personnalisee pour [Zebar](https://github.com/glzr-io/zebar) uti
 
 ### Composants
 
-- **Gauche** : Boutons Windows, recherche, espaces de travail, direction de tiling
-- **Centre** : Icones des applications actives
-- **Droite** : Medias, CPU, memoire, meteo, reseau, volume, batterie, heure
+- **Gauche** : Direction de tiling, espaces de travail
+- **Centre** : Rien
+- **Droite** : Réseau, CPU, memoire, volume, heure
 
 ## Prerequis
 
