@@ -1,0 +1,120 @@
+.memory-container {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0.2rem 0.3rem 0.2rem 0.2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: #fff;
+  text-shadow: 0 0 2px black;
+  width: fit-content;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.memory-container:hover {
+  animation: hoverbutton 0.1s ease forwards;
+  -webkit-animation: hoverbutton 0.1s ease forwards;
+}
+
+.memory-hover-zone {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.i-memory {
+  font-size: 13px;
+  width: 1rem;
+}
+
+/* Barre de progression */
+.memory-bar-wrapper {
+  width: 2.5rem;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.15s ease;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.memory-bar-wrapper.hidden {
+  transform: translateY(1.5rem);
+  opacity: 0;
+  -webkit-transform: translateY(1.5rem);
+  -moz-transform: translateY(1.5rem);
+  -ms-transform: translateY(1.5rem);
+  -o-transform: translateY(1.5rem);
+}
+
+.memory-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* Couleurs selon l'usage mémoire */
+.low-usage .memory-bar-fill {
+  background-color: var(--green);
+}
+.medium-usage .memory-bar-fill {
+  background-color: var(--yellow);
+}
+.high-usage .memory-bar-fill {
+  background-color: var(--orange);
+}
+.extreme-usage .memory-bar-fill {
+  background-color: var(--b-red);
+}
+
+/* Usage en GB */
+.memory-usage {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 0.875rem;
+  transform: translateY(-1.5rem);
+  opacity: 0;
+  transition: all 0.15s ease;
+  color: #fff;
+  pointer-events: none;
+  text-shadow: 0 0 2px black;
+  white-space: nowrap;
+  -webkit-transform: translateY(-1.5rem);
+  -moz-transform: translateY(-1.5rem);
+  -ms-transform: translateY(-1.5rem);
+  -o-transform: translateY(-1.5rem);
+}
+
+.memory-usage.visible {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.memory-container.clicked-animated {
+  animation: appear 0.2s ease;
+  -webkit-animation: appear 0.2s ease;
+  -moz-animation: appear 0.2s ease;
+  -ms-animation: appear 0.2s ease;
+  -o-animation: appear 0.2s ease;
+}

@@ -1,0 +1,116 @@
+.cpu-container {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0.2rem 0.3rem 0.2rem 0.2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: #fff;
+  text-shadow: 0 0 2px black;
+  width: fit-content;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.cpu-container:hover {
+  animation: hoverbutton 0.1s ease forwards;
+  -webkit-animation: hoverbutton 0.1s ease forwards;
+}
+
+.cpu-hover-zone {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.i-cpu {
+  font-size: 13px;
+  width: 1rem;
+}
+
+/* Barre de progression */
+.cpu-bar-wrapper {
+  width: 2.5rem;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.15s ease;
+}
+
+.cpu-bar-wrapper.hidden {
+  transform: translateY(1.5rem);
+  opacity: 0;
+}
+
+.cpu-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Couleurs selon l'usage CPU */
+.low-usage .cpu-bar-fill {
+  background-color: var(--green);
+}
+.medium-usage .cpu-bar-fill {
+  background-color: var(--yellow);
+}
+.high-usage .cpu-bar-fill {
+  background-color: var(--orange);
+}
+.extreme-usage .cpu-bar-fill {
+  background-color: var(--b-red);
+}
+
+/* Pourcentage */
+.cpu-percentage {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 0.875rem;
+  transform: translateY(-1.5rem);
+  opacity: 0;
+  transition: all 0.15s ease;
+  color: #fff;
+  pointer-events: none;
+  text-shadow: 0 0 2px black;
+  white-space: nowrap;
+}
+
+.cpu-percentage.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cpu-container.clicked-animated {
+  animation: appear 0.2s ease;
+  -webkit-animation: appear 0.2s ease;
+}
+
+/* Animations */
+@keyframes hoverbutton {
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

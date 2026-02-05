@@ -1,0 +1,123 @@
+.network {
+  color: #ffffff;
+  padding: 0 3px 0 3px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.network.clicked-animated .content {
+  animation: appear 0.2s ease;
+  -webkit-animation: appear 0.2s ease;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ii {
+  font-size: 9px;
+  width: 9px;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.net-line {
+  /* SUPPRIME COMPLÈTEMENT le min-width: 48px */
+  /* Laisse vide ou supprime cette classe */
+}
+
+.i-wifi {
+  margin-bottom: 0px;
+  margin-left: -4px;
+}
+
+.i-eth {
+  margin: 0 1px 0px -3px;
+}
+
+img[src*="icons8-wired-network-32.png"] {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+}
+
+.ping-container {
+  margin-left: -3px;
+  margin-right: 2px;
+}
+
+.ping-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.ping-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.ping-ms {
+  font-size: 9px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.ip-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10px;
+}
+
+.ip-local {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.ip-separator {
+  color: #666;
+}
+
+.ip-public-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.ip-eye {
+  cursor: pointer;
+  font-size: 11px;
+  color: #888;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.ip-eye:hover {
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.ip-public {
+  color: #75ea07;
+  margin-right: 8px;
+}

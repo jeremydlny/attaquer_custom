@@ -1,0 +1,39 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/zpack-schema.json",
+  "name": "attaquer_custom",
+  "version": "1.0.0",
+  "description": "Custom zebar bar",
+  "tags": [],
+  "previewImages": ["Preview1.png"],
+  "repositoryUrl": "",
+  "widgets": [
+    {
+      "name": "top-bar",
+      "htmlPath": "./dist/index.html",
+      "zOrder": "normal",
+      "shownInTaskbar": false,
+      "focused": false,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": ["dist/**"],
+      "presets": [
+        {
+          "name": "1080p",
+          "anchor": "top_left",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "width": "100%",
+          "height": "26px",
+          "monitorSelection": {
+            "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    }
+  ]
+}

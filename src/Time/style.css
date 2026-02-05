@@ -1,0 +1,18 @@
+.date {
+  width: 3.8rem;
+  color: #ffffff;
+  margin-right: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  &.clicked-animated .content {
+    animation: appear 0.2s ease;
+  }
+}
+img {
+  width: 17px;
+  height: 17px;
+}
+
+img[src*="icons8-time-32.png"] {
+  filter: brightness(0) invert(1);
+}
