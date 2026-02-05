@@ -35,7 +35,3 @@ Pour rebuilder automatiquement lors des modifications :
 ```bash
 npm run dev
 ```
-
-## Credits
-
-Base sur le travail de [iAttaquer](https://github.com/iAttaquer/.glzr).
